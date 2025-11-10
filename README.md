@@ -6,4 +6,18 @@
 
 ## What is Orbix?
 
-Orbix is a simple, lightweight terminal data lib, used by devs for certain features/cases.
+Orbix is a simple, lightweight terminal data lib, used by devs for certain features/cases. If you want free, simple and clean terminal utilities for developers.
+
+The software is made of a variety languages for the user to pick from. Each language, though has different utilities inside it.
+
+## How to use?
+
+Folow the steps to use Orbix:
+
+1. Clone the repo:
+   
+2. 
+
+## License
+
+MIT License. **[View](LICENSE)**
