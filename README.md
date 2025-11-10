@@ -20,12 +20,18 @@ Folow the steps to use Orbix:
    ```
 
 
-2. `cd` into the git repo:
+2. `cd` into the orbix directory in the orbix git repo:
    ```bash
-   cd orbix
+   cd orbix/orbix
    ```
 
-3. 
+3. Select your language
+4. `cd` into the directory for your chosen language:
+   ```bash
+   cd [chosen-language]
+   ```
+
+5. View the files in the lanu
 
 ## License
 
