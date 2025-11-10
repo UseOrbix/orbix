@@ -28,10 +28,33 @@ Folow the steps to use Orbix:
 3. Select your language
 4. `cd` into the directory for your chosen language:
    ```bash
-   cd [chosen-language]
+   cd [chosen language]
    ```
 
-5. View the files in the lanu
+> [!NOTE]
+> Not all laguages exist on Orbix. Use discussions to ask for more.
+   
+
+5. Use `ls` to view the files in the language directory
+6. Select a terminal application
+7. Move the application to the new location:
+   ```bash
+   mv [chosen application] [new location]
+   ```
+
+> [!CAUTION]
+> You may have to complete this step more the once as there might be more than one file in each directory.
+
+8. `cd` into the directory of the [new location]:
+   ```bash
+   cd [directory location]
+   ```
+
+9. Run the program
+
+> [!TIP]
+> Run an automated script that does these steps for you. Find it [here](utils/automation/automate.js).
+
 
 ## License
 
