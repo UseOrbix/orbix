@@ -4,8 +4,8 @@ import sys
 def install_package(package):
     try:
         subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-    except subprocess.CalledProcessError:
-        print(f"Failed to install {package}. Please install it manually.")
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to install {package}: {e}")
         sys.exit(1)
 
 try:
@@ -21,7 +21,7 @@ def load_repo(path='.'):
     try:
         return Repo(path)
     except InvalidGitRepositoryError:
-        print("Not a git repo. Please run inside a git repository folder.")
+        print("Not a git repository. Please run this script inside a git repo directory.")
         sys.exit(1)
 
 def show_current_branch(repo):
@@ -29,7 +29,7 @@ def show_current_branch(repo):
 
 def show_latest_commit(repo):
     commit = repo.head.commit
-    print(f'Latest commit: {commit.hexsha[:7]} - {commit.message.strip()} by {commit.author.name}')
+    print(f'Latest commit: {commit.hexsha[:7]} - "{commit.message.strip()}" by {commit.author.name}')
 
 def show_status(repo):
     changed_files = [item.a_path for item in repo.index.diff(None)]
@@ -37,19 +37,31 @@ def show_status(repo):
     untracked = repo.untracked_files
 
     print("\nChanges not staged for commit:")
-    for f in changed_files:
-        print(f"  modified: {f}")
+    if changed_files:
+        for f in changed_files:
+            print(f"  modified: {f}")
+    else:
+        print("  None")
+
     print("\nChanges to be committed:")
-    for f in staged_files:
-        print(f"  staged: {f}")
+    if staged_files:
+        for f in staged_files:
+            print(f"  staged: {f}")
+    else:
+        print("  None")
+
     print("\nUntracked files:")
-    for f in untracked:
-        print(f"  {f}")
+    if untracked:
+        for f in untracked:
+            print(f"  {f}")
+    else:
+        print("  None")
 
 def show_commit_history(repo, n=5):
     print(f"\nLast {n} commits:")
     for commit in list(repo.iter_commits(max_count=n)):
-        print(f"{commit.hexsha[:7]} | {commit.author.name} | {commit.committed_datetime.strftime('%Y-%m-%d %H:%M')} | {commit.message.strip()}")
+        date_str = commit.committed_datetime.strftime('%Y-%m-%d %H:%M')
+        print(f"{commit.hexsha[:7]} | {commit.author.name} | {date_str} | {commit.message.strip()}")
 
 def main():
     repo = load_repo()
