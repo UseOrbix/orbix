@@ -5,6 +5,7 @@ The table below shows where all the utilities are located:
 |Language|Location|Hyperlink|
 |-|-|-|
 |python (.py)|python/|[click](python/)|
+|java (.java)|java/|[click](java/)|
 
 ---
 
