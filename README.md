@@ -53,7 +53,7 @@ Folow the steps to use Orbix:
 9. Run the program
 
 > [!TIP]
-> Run an automated script that does these steps for you. Find it [here](utils/automation/automate.js).
+> Run an automated script that does these steps for you. Find it [here](utils/automation/automate.sh).
 
 
 ## License
