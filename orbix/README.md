@@ -8,7 +8,7 @@ The table below shows where all the utilities are located:
 |java (.java)|java/|[click](java/)|
 |c (.c)|c/|[click](c/)|
 
-> [!Note]
+> [!Tip]
 > Use the table above to find where the utilities in this directory.
 
 ---
