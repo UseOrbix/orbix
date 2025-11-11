@@ -55,6 +55,10 @@ Folow the steps to use Orbix:
 > [!TIP]
 > Run an automated script that does these steps for you. Find it [here](utils/automation/automate.sh).
 
+---
+
+**Find out more at [useorbix.pages.dev](https://useorbix.pages.dev)**
+
 
 ## License
 
